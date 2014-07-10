@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "TechCoffee Demo",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "0.0.1",
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_title": "This is a title",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "devtools_page": "devtools.html"
+}
